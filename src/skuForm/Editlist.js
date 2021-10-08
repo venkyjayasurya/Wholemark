@@ -4,7 +4,15 @@ import * as yup from "yup";
 import { TextField, Button } from "@material-ui/core";
 
 export const Editlist = () => {
-    const validationSchema = yup.object({
+    const obj = {
+      value: 5,
+      label: "three roses",
+      owner: "owner",
+      price: 50,
+      quantity: 3,
+    };
+
+    const validationSchema = yup.object({    
         firstName: yup.string().required("First Name is required"),
         sellerName: yup.string().required("Last Name is required"),
         productName: yup.string().required("productName is required"),
@@ -14,11 +22,11 @@ export const Editlist = () => {
 
     const formik = useFormik({
         initialValues: {
-            productID: "",
-            sellerName: "",
-            productName: "",
-            price: "",
-            quantity: ""
+            productID: obj.value,
+            sellerName: obj.owner,
+            productName: obj.label,
+            price: obj.price,
+            quantity: obj.quantity
         },
         onSubmit: (values) => {
             alert(JSON.stringify(values))

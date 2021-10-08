@@ -114,7 +114,7 @@ export function MultipleSelectCheckmarks() {
         </FormControl>
         <Table />
       </div>
-      {finalSkuArr !== null ? <Table arr={finalSkuArr} /> : []}
+      {/* {finalSkuArr !== null ? <Table arr={finalSkuArr} /> : []} */}
     </>
   );
 }
