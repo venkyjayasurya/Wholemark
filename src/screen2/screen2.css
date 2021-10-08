@@ -1,0 +1,40 @@
+h2{
+    text-align: center;
+    margin-top: 32px;
+    color: white;
+    border: 1px solid white;
+    padding: 8px;
+    width: 25%;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 85%;
+    table-layout: fixed;
+    background-color: rgb(255, 255, 255);
+    margin-top: 78px;
+    text-align: center;
+    border-radius: 12px;
+  }
+  
+   th {
+    border: 1px solid #575757;
+    padding: 8px;
+  }
+  td{
+    padding: 8px;
+    position: relative;
+    border: 1px solid;
+  }
+
+.style-rect2{
+    margin: 0;
+    padding: 0; 
+    position: absolute;
+    top: 0;
+    background-color: rgb(83, 0, 151);
+    width: 100%;
+    height: 30%;
+    z-index: -1; 
+}

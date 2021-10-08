@@ -1,0 +1,30 @@
+[
+        {  
+            "ProductID": 1,
+            "SellerName": "Goutham",
+            "ProductName": "head & shoulders",
+            "price": 50.0,
+            "quantity": "100gm" 
+        },
+        {
+            "ProductID": 2,
+            "SellerName": "Srinith",
+            "ProductName": "Dove",
+            "price": 70.0,
+            "quantity": "200gm"
+        },
+        {
+            "ProductID": 3,
+            "SellerName": "Chetan",
+            "ProductName": "Trimmer",
+            "price": 170.0,
+            "quanti ty": "1"
+        },
+        {
+            "ProductID": 4,
+            "SellerName": "Venkatesh",
+            "ProductName": "Shaving Cream",
+            "price": 70.0,
+            "quantity": "200gm"
+        }
+]

@@ -1,0 +1,30 @@
+{
+  "100101": {
+    "SkuName": "TigerBiscuits",
+    "SkuId": 100101,
+    "Price": 500,
+    "BatchNo": "10Pa",
+    "Quantity": 1
+  },
+  "100102": {
+    "SkuName": "GoodDay",
+    "SkuId": 100102,
+    "Price": 500,
+    "BatchNo": "10Puta",
+    "Quantity": 3
+  },
+  "100103": {
+    "SkuName": "Parle-G",
+    "SkuId": 100103,
+    "Price": 500,
+    "BatchNo": "13Pa",
+    "Quantity": 6
+  },
+  "100104": {
+    "SkuName": "Hide&Seek",
+    "SkuId": 100104,
+    "Price": 500,
+    "BatchNo": "16Pa",
+    "Quantity": 111
+  }
+}

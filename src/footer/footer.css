@@ -1,0 +1,22 @@
+footer{
+    margin: 0;
+    padding: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    text-align: center;
+    background-color: rgb(83, 0, 151);  
+    height: 8vh;
+}
+
+p{
+    color: white;
+    margin: 2px;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(214, 214, 214);
+    font-weight: bold;
+}

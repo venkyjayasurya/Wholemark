@@ -1,0 +1,31 @@
+.App{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 85%;
+    table-layout: fixed;
+    background-color: rgb(255, 255, 255);
+    margin-top: 78px;
+    text-align: center;
+    border-radius: 12px;
+  }
+  
+   th {
+    border: 1px solid #575757;
+    padding: 8px;
+  }
+  td{
+    padding: 8px;
+    position: relative;
+    border: 1px solid;
+  }
+
+
