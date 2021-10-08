@@ -51,7 +51,13 @@ export function MultipleSelectCheckmarks() {
     }
 
 
-      setFinalSkuArr(...finalSkuArr, {value: value, label: label, owner: owner, price: price, quantity: quantity})
+    const obj={value: value, label: label, owner: owner, price: price, quantity: quantity}
+
+    const arr = finalSkuArr.slice();
+    arr.push(obj);
+    setFinalSkuArr(arr)
+
+     // setFinalSkuArr(...finalSkuArr, {value: value, label: label, owner: owner, price: price, quantity: quantity})
   }, [skuArr])
 
 
