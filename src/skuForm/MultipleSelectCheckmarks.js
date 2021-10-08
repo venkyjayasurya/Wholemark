@@ -11,6 +11,7 @@ import {
 
 import data from "./list";
 import warehouses from "./warehouseList";
+import Table from './Table';
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -111,7 +112,9 @@ export function MultipleSelectCheckmarks() {
             ))}
           </Select>
         </FormControl>
+        <Table />
       </div>
+      {finalSkuArr !== null ? <Table arr={finalSkuArr} /> : []}
     </>
   );
 }
