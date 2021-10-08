@@ -2,14 +2,18 @@ import React from 'react'
 import { useFormik } from "formik";
 import * as yup from "yup";
 import { TextField, Button } from "@material-ui/core";
+import { useLocation } from 'react-router';
 
-export const Editlist = () => {
+export const Editlist = (props) => {
+    const location = useLocation()
+
+    console.log(location)
     const obj = {
-      value: 5,
-      label: "three roses",
-      owner: "owner",
-      price: 50,
-      quantity: 3,
+      value: location.state.value,
+      label: location.state.label,
+      owner: location.state.owner,
+      price: location.state.price,
+      quantity: location.state.quantity,
     };
 
     const validationSchema = yup.object({    
@@ -36,7 +40,6 @@ export const Editlist = () => {
 
     return (
         <div>
-
             <form onSubmit={formik.handleSubmit}>
                 <TextField
                     id="productID"
@@ -74,7 +77,6 @@ export const Editlist = () => {
                     error={formik.touched.sellerName && Boolean(formik.errors.sellerName)}
                     helperText={formik.touched.sellerName && formik.errors.sellerName}
                     variant="outlined"
-                    
                 />
                 
                 <TextField
@@ -86,8 +88,7 @@ export const Editlist = () => {
                     onChange={formik.handleChange}
                     error={formik.touched.quantity && Boolean(formik.errors.quantity)}
                     helperText={formik.touched.quantity && formik.errors.quantity}
-                    variant="outlined"
-                    
+                    variant="outlined"       
                 />
                 <TextField
                     id="price"

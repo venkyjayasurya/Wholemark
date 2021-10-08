@@ -11,7 +11,7 @@ import {
 
 import data from "./list";
 import warehouses from "./warehouseList";
-import Table from './Table';
+import TableComp from "./TableComp";
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -39,28 +39,33 @@ export function MultipleSelectCheckmarks() {
   };
 
   useEffect(() => {
-    let skuArrlen = skuArr.length
-    var i
-    for (i = 0; i < data.length; i++) {
-      if (data[i].label === skuArr[skuArrlen - 1]) {
-        var value = data[i].value
-        var label = data[i].label
-        var owner = data[i].owner
-        var price = data[i].price
-        var quantity = data[i].quantity
+    let skuArrlen = skuArr.length;
+    var i;
+    if (skuArrlen > 0) {
+      for (i = 0; i < data.length; i++) {
+        if (data[i].label === skuArr[skuArrlen - 1]) {
+          var value = data[i].value;
+          var label = data[i].label;
+          var owner = data[i].owner;
+          var price = data[i].price;
+          var quantity = data[i].quantity;
+        }
       }
+
+      const obj = {
+        value: value,
+        label: label,
+        owner: owner,
+        price: price,
+        quantity: quantity,
+      };
+
+      const arr = finalSkuArr.slice();
+      arr.push(obj);
+      setFinalSkuArr(arr);
     }
-
-
-    const obj={value: value, label: label, owner: owner, price: price, quantity: quantity}
-
-    const arr = finalSkuArr.slice();
-    arr.push(obj);
-    setFinalSkuArr(arr)
-
-     // setFinalSkuArr(...finalSkuArr, {value: value, label: label, owner: owner, price: price, quantity: quantity})
-  }, [skuArr])
-
+    // setFinalSkuArr(...finalSkuArr, {value: value, label: label, owner: owner, price: price, quantity: quantity})
+  }, [skuArr]);
 
   const [warehouse, setWarehouse] = useState("");
 
@@ -112,9 +117,10 @@ export function MultipleSelectCheckmarks() {
             ))}
           </Select>
         </FormControl>
-        <Table />
       </div>
-      {/* {finalSkuArr !== null ? <Table arr={finalSkuArr} /> : []} */}
+      {finalSkuArr !== null ? <TableComp arr={finalSkuArr} /> : []}
+      {console.log(warehouse)}
+      {console.log(finalSkuArr)}
     </>
   );
 }

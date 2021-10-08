@@ -12,12 +12,13 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Route path="/" component={Screen1} exact />
+        <Route path="/" component={MultipleSelectCheckmarks} exact />
+        {/* <Route path="/" component={Screen1} exact />
         <Route path="/Screen2" component={Screen2} />
         <Route path="/Form" component={Form} />
         <Route path="/SkuForm" component={SkuForm} />
-        <Route path="/SkuForm2" component={MultipleSelectCheckmarks} />
-        <Route path="/Editlist" component={Editlist}/>
+  <Route path="/SkuForm2" component={MultipleSelectCheckmarks} /> */}
+        <Route path="/edit" component={Editlist} />
       </div>
     </Router>
   );
